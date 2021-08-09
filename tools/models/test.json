@@ -1,0 +1,18 @@
+{
+    "number": "205",
+    "name": "Carbohydrate, by difference",
+    "amount": 71.0,
+    "unitName": "G"
+},
+{
+    "number": "208",
+    "name": "Energy",
+    "amount": 468,
+    "unitName": "KCAL"
+},
+{
+    "number": "221",
+    "name": "Alcohol, ethyl",
+    "amount": 0E-8,
+    "unitName": "G"
+}
