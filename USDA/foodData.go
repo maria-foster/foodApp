@@ -21,16 +21,12 @@ func GetAllFoods() []models.Food {
 	if err != nil {
 	   log.Fatalln(err)
 	}
-	// log.Printf(string(body))
 
 	err = json.Unmarshal(body, &food)
 	if err != nil {
 		log.Fatalln(err)
 	 }
 
-	 for i, f:= range food {
-		log.Println(i, f)
-	}
 	return food
 	
 }
