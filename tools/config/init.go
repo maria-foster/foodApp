@@ -6,7 +6,6 @@ import (
     "log"
 )
 
-
 func init() {
 	var Config Config 
 
