@@ -2,15 +2,17 @@ package main
 
 import (
 	USDA "foodApp/USDA"
-	MacroCalculator "foodApp/macroCalculator"
+	parser "foodApp/tools/parser"
+	// MacroCalculator "foodApp/macroCalculator"
 	// "log"
 )
 
 
 func main(){ 
 	USDA.GetAllFoods()
-	MacroCalculator.CollectProfileInfo()
-	// for i, food:= range allFoods {
-	// 	log.Println(i, food)
-	// }
+	profiles := parser.ReadProfileJSON("./data/profiles.json")
+	
+	for _, p := range profiles {
+		log.Print(p.CalculateBMR())
+	}
 }

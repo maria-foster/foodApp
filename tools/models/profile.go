@@ -11,6 +11,7 @@ type Profile struct {
 	ActiveCalories	float64
 	Goal			string
 	BMR				float64
+	Macros			Macros
 
 }
 
@@ -23,4 +24,21 @@ func (profile Profile) CalculateBMR(){
 
 func (profile Profile) CalculateActiveCalories() {
 	
+}
+
+func (profile Profile) CalculateMacros() {
+	if(strings.EqualFold(profile.Goal, "maintenance" )){
+		profile.Macros.Fat.FatPercentage = .3
+		profile.Macros.Carbohydrates.CarbohydratePercentage = .3
+		profile.Macros.Protein.ProteinPercentage = .3
+	}
+
+	profile.Macros.Fat.FatCalories = profile.BMR * profile.Macros.Fat.FatPercentage
+	profile.Macros.Fat.FatGrams =  profile.BMR * profile.Macros.Fat.FatPercentage / 9
+
+	profile.Macros.Carbohydrates.CarbohydrateCalories = profile.BMR * profile.Macros.Carbohydrates.CarbohydratePercentage
+	profile.Macros.Carbohydrates.CarbohydrateGrams =  profile.BMR * profile.Macros.Carbohydrates.CarbohydratePercentage / 4
+
+	profile.Macros.Protein.ProteinCalories = profile.BMR * profile.Macros.Protein.ProteinPercentage
+	profile.Macros.Protein.ProteinGrams =  profile.BMR * profile.Macros.Protein.ProteinPercentage / 4
 }

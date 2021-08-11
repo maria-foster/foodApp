@@ -8,22 +8,22 @@ type Macros struct {
 }
 
 type Fat struct {
-	FatPercentage		int64
-	FatGrams			int64
-	FatCalories			int64
+	FatPercentage		float64
+	FatGrams			float64
+	FatCalories			float64
 
 }
 
 type Protein struct {
-	ProteinPercentage		int64
-	ProteinGrams			int64
-	ProteinCalories			int64
+	ProteinPercentage		float64
+	ProteinGrams			float64
+	ProteinCalories			float64
 
 }
 
 type Carbohydrates struct {
-	CarbohydratePercentage		int64
-	CarbohydrateGrams			int64
-	CarbohydrateCalories		int64
+	CarbohydratePercentage		float64
+	CarbohydrateGrams			float64
+	CarbohydrateCalories		float64
 
 }
