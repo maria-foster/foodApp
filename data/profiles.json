@@ -1,0 +1,11 @@
+[
+    {
+        "Sex": "female",
+        "Age": 24,
+        "Weight": 121,
+        "HeightInches": 61.5,
+        "ActivityLevel": "sedentary",
+        "Goal": "build",
+        "BMR": 0
+    }
+]
