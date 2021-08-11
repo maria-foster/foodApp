@@ -3,8 +3,6 @@ package main
 import (
 	USDA "foodApp/USDA"
 	parser "foodApp/tools/parser"
-
-	"log"
 )
 
 
