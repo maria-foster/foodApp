@@ -3,6 +3,8 @@ package main
 import (
 	USDA "foodApp/USDA"
 	parser "foodApp/tools/parser"
+
+	"log"
 )
 
 
@@ -11,6 +13,7 @@ func main(){
 	profiles := parser.ReadProfileJSON("./data/profiles.json")
 	
 	for _, p := range profiles {
-		log.Print(p.CalculateBMR())
+		p.CalculateBMR()
+		p.CalculateMacros()
 	}
 }
